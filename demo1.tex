@@ -1,0 +1,74 @@
+% Presented by Valerie Jeffcott
+
+\documentclass[letterpaper,12pt]{article}
+\usepackage[margin=2.5cm,letterpaper]{geometry}
+\usepackage[linguistics]{forest}
+
+\usepackage{gb4e}
+
+\newcommand{\0}{∅}
+
+\begin{document}
+
+This is the first paragraph.
+
+\section{Section Heading}
+
+\begin{enumerate}
+    \item this
+    \item is
+    \item a numbered list
+\end{enumerate}
+
+This is the second paragraph.
+This is \textbf{still} the second       paragraph.
+\textit{Lorem ipsum dolor sit amet.}
+
+Now here's a third paragraph.
+
+\begin{itemize}
+    \item an
+    \item unordered
+    \item list
+\end{itemize}
+
+Here's a table:\\
+
+\begin{tabular}{r|cc}
+    &$-$back&$+$back\\
+    \hline
+    $+$high&i&u\\
+    $-$high&e&o\\
+\end{tabular} \\
+
+This is a gloss made with the \texttt{gb4e} package:
+
+% The Greek script requires a work-around using XeLaTeX. If you can't figure it out, comment out these lines (by adding % to the beginning of the line) -- you will also need to comment out the next three lines because the gb4e code will break when you comment the first line
+
+\gll ὕδορ μεν ἄριστον\\
+	hudor men ariston\\
+    water-\textsc{nom.sg.neut} but best-\textsc{nom.sg.neut}\\
+\glt `Water, however, is best.'\\
+
+Here's a syntax tree made with the \texttt{forest} package:
+
+\begin{forest}
+    [IP
+        [NP[Noam Chomsky,roof]]
+        [I'
+            [I\\(past)]
+            [VP
+                [VP
+                    [V[wrote]]
+                    [NP[\textit{Syntactic Structures},roof]]
+                ]
+                [PP
+                    [P[in]]
+                    [NP[1957,roof]]
+                ]
+            ]
+        ]
+    ]
+\end{forest}
+
+\end{document}
